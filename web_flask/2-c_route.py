@@ -28,13 +28,9 @@ def c_text(text):
     Display 'C <text>' where <text> is a URL parameter.
     Replaces underscores with spaces in <text>.
     """
-    # Replace underscores in <text> with spaces
     formatted_text = text.replace('_', ' ')
 
-    # Return the formatted text prefixed with 'C '
     return f"C {formatted_text}"
 
-# Check if this script is being run directly by the Python interpreter
 if __name__ == '__main__':
-    # Run the Flask application in debug mode on the local development server
     app.run(debug=True)
