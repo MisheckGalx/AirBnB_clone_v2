@@ -18,11 +18,14 @@ def hbnb():
     return "HBNB"
 
 
+# Route for '/c/<text>'
 @app.route('/c/<text>', strict_slashes=False)
 def c_text(text):
-    """/c/<text>: display C and the text"""
-    text_written = "{}".format(text)
-    new_text_written = text_written.replace('_', ' ')
+    """
+    Display 'C <text>' where <text> is a URL parameter.
+    Replaces underscores with spaces in <text>.
+    """
+    formatted_text = text.replace('_', ' ')
 
     return f"C {formatted_text}"
 
