@@ -24,19 +24,21 @@ def c_text(text):
     text_written = "{}".format(text)
     new_text_written = text_written.replace('_', ' ')
 
-    return "C {}".format(new_text_written)
+    return f"C {formatted_text}"
 
-
+# Routes for '/python', '/python/' and '/python/<text>'
 @app.route('/python', strict_slashes=False)
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text='is cool'):
-    """python_text: display Python and the text"""
-    text_written = "{}".format(text)
-    new_text_written = text_written.replace('_', ' ')
+    """
+    D 'Python <text>' where <text> is a URL parameter (default is 'is cool').
+    Replaces underscores with spaces in <text>.
+    """
+    formatted_text = text.replace('_', ' ')
+    return f"Python {formatted_text}"
 
-    return "Python {}".format(new_text_written)
-
-
+# Check if this script is being run directly by the Python interpreter
 if __name__ == '__main__':
+    # Run the Flask application in debug mode on the local development server
     app.run(debug=True)
