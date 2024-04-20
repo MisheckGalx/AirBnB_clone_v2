@@ -1,21 +1,23 @@
 #!/usr/bin/python3
-"""2-c_route module"""
+"""A Flask web application with multiple routes"""
+
 from flask import Flask
 
 
 app = Flask(__name__)
 
 
+# Define a route for the root URL '/'
 @app.route('/', strict_slashes=False)
 def root():
-    """/: display “Hello HBNB!”"""
+    """Display 'Hello HBNB!' when accessing the root URL"""
     return "Hello HBNB!"
 
 
 # Define a route for '/hbnb'
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """/hbnb: display “HBNB”"""
+    """/hbnb: Display 'HBNB' when accessing the '/hbnb' URL"""
     return "HBNB"
 
 
