@@ -11,10 +11,11 @@ def root():
     """/: display “Hello HBNB!”"""
     return "Hello HBNB!"
 
+
 # Define a route for '/hbnb'
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """Display 'HBNB' when accessing the '/hbnb' URL"""
+    """/hbnb: display “HBNB”"""
     return "HBNB"
 
 
