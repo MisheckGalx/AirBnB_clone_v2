@@ -5,10 +5,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# Define a route for the root URL '/' of the web application
+# Write a script that starts a Flask web application:
 @app.route('/', strict_slashes=False)
 def display():
-    """Display 'Hello HBNB!' when accessing the root URL"""
+    """Script that starts a Flask web application"""
     return 'Hello HBNB!'
 
 
