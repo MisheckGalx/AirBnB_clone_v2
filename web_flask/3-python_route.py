@@ -29,7 +29,6 @@ def c_text(text):
     return f"C {formatted_text}"
 
 
-
 # Define routes for '/python', '/python/' and '/python/<text>'
 @app.route('/python', strict_slashes=False)
 @app.route('/python/', strict_slashes=False)
