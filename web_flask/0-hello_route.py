@@ -6,7 +6,7 @@ from flask import Flask
 # Create an instance of the Flask class
 app = Flask(__name__)
 
-# Define a route for the root URL '/' of the web application
+
 @app.route('/', strict_slashes=False)
 def display():
     """Starts a Flask web application"""
