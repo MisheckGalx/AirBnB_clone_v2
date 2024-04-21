@@ -3,9 +3,7 @@
 
 from flask import Flask
 
-
 app = Flask(__name__)
-
 
 # Define a route for the root URL '/'
 @app.route('/', strict_slashes=False)
@@ -29,6 +27,7 @@ def c_text(text):
     """
     formatted_text = text.replace('_', ' ')
     return f"C {formatted_text}"
+
 
 
 # Define routes for '/python', '/python/' and '/python/<text>'
