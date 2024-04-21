@@ -35,11 +35,11 @@ def c_text(text):
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text='is cool'):
-    """
-		'Python <text>' where <text> is a URL parameter (default is 'is cool').
-    """
-    formatted_text = text.replace('_', ' ')
-    return f"Python {formatted_text}"
+    """python_text: display Python and the text"""
+    text_written = "{}".format(text)
+    new_text_written = text_written.replace('_', ' ')
+
+    return "Python {}".format(new_text_written)
 
 
 if __name__ == '__main__':
