@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Define a route for the root URL '/' of the web application
 @app.route('/', strict_slashes=False)
 def display():
-    """Display 'Hello HBNB!' when accessing the root URL"""
+    """Starts a Flask web application"""
     return 'Hello HBNB!'
 
 # Check if this script is being run directly by the Python interpreter
